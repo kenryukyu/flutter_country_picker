@@ -8,26 +8,7 @@ export 'country.dart';
 
 const _platform = const MethodChannel('biessek.rocks/flutter_country_picker');
 Future<List<Country>> _fetchLocalizedCountryNames() async {
-  List<Country> renamed = new List();
-  Map result;
-  try {
-    var isoCodes = <String>[];
-    Country.ALL.forEach((Country country) {
-      isoCodes.add(country.isoCode);
-    });
-    result = await _platform.invokeMethod(
-        'getCountryNames', <String, dynamic>{'isoCodes': isoCodes});
-  } on PlatformException catch (e) {
-    return Country.ALL;
-  }
-
-  for (var country in Country.ALL) {
-    renamed.add(country.copyWith(name: result[country.isoCode]));
-  }
-  renamed.sort(
-      (Country a, Country b) => removeDiacritics(a.name).compareTo(b.name));
-
-  return renamed;
+  return Country.ALL;
 }
 
 /// The country picker widget exposes an dialog to select a country from a
@@ -152,8 +133,8 @@ Future<Country> showCountryPicker({
   return await showDialog<Country>(
     context: context,
     builder: (BuildContext context) => _CountryPickerDialog(
-          defaultCountry: defaultCountry,
-        ),
+      defaultCountry: defaultCountry,
+    ),
   );
 }
 
