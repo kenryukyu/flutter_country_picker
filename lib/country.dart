@@ -721,7 +721,7 @@ class Country {
     asset: "assets/flags/jp_flag.png",
     dialingCode: "81",
     isoCode: "JP",
-    name: "Japan",
+    name: "日本",
   );
   static const Country KE = Country(
     asset: "assets/flags/ke_flag.png",
@@ -1483,7 +1483,7 @@ class Country {
     asset: "assets/flags/vn_flag.png",
     dialingCode: "84",
     isoCode: "VN",
-    name: "Viet Nam",
+    name: "Việt Nam",
   );
   static const Country VU = Country(
     asset: "assets/flags/vu_flag.png",
@@ -1536,6 +1536,8 @@ class Country {
 
   /// All the countries in the picker list
   static const ALL = <Country>[
+    JP,
+    VN,
     AD,
     AE,
     AF,
@@ -1649,7 +1651,6 @@ class Country {
     JE,
     JM,
     JO,
-    JP,
     KE,
     KG,
     KH,
@@ -1776,7 +1777,6 @@ class Country {
     VE,
     VG,
     VI,
-    VN,
     VU,
     WF,
     WS,
