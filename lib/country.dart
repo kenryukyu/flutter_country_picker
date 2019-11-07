@@ -1768,7 +1768,6 @@ class Country {
     UA,
     UG,
     UM,
-    US,
     UY,
     UZ,
     VA,
