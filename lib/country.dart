@@ -325,7 +325,7 @@ class Country {
     asset: "assets/flags/cn_flag.png",
     dialingCode: "86",
     isoCode: "CN",
-    name: "China",
+    name: "中文",
   );
   static const Country CO = Country(
     asset: "assets/flags/co_flag.png",
@@ -1538,8 +1538,8 @@ class Country {
   static const ALL = <Country>[
     JP,
     VN,
-    AD,
-    AE,
+    US,
+    CN,
     AF,
     AG,
     AI,
