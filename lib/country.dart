@@ -1585,7 +1585,6 @@ class Country {
     CK,
     CL,
     CM,
-    CN,
     CO,
     CR,
     CU,
